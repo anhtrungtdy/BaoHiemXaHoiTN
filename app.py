@@ -5,7 +5,8 @@ from PyPDF2 import PdfReader
 from docx import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
-from langchain.vectorstores import FAISS
+# DÒNG ĐÃ SỬA: Import FAISS từ langchain_community
+from langchain_community.vectorstores import FAISS
 from langchain.chains.question_answering import load_qa_chain
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.prompts import PromptTemplate
@@ -204,7 +205,7 @@ def main():
                         st.error("Không thể trích xuất văn bản từ các tệp đã tải lên.")
 
     # --- KHUNG CHAT CHÍNH ---
-    st.header("Chat Với Dữ Liệu Của Bạn 🤖📚")
+    st.header("Chat Với Dữ Liệu Của Bạn 🤖�")
     st.write("Tải tài liệu của bạn lên, xây dựng cơ sở tri thức, và bắt đầu hỏi đáp!")
     st.markdown("---")
 
@@ -218,4 +219,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-S
+�
